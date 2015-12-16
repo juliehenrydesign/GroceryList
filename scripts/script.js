@@ -1,27 +1,20 @@
 $(document).ready(function() {
 
-	$(function() {
-		$("#add").on("click",addItem);
-		function addItem() {
-		var text = $("#addtext").val();
-		alert(text);
-	
-	}
+$('#add').on('click', function(){
+	$("#g-list").append("<li>"+$('#new-text').val()+ "<button>DONE</button>"+"</li>");
+		$("#new-text").val("");
+	$("li").on("click", function(){
+	$(this).remove();
+})
 
-	});
+});
 
-
-
-
-
-
-
-
-
-
-
-
+$("li").on("click", function(){
+	$(this).remove();
+})
 
 
 
 });
+
+
